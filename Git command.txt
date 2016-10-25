@@ -1,5 +1,5 @@
 cd <move to working directory>
-git clone https://github.com/venkatkrp/Onlineapp.git
+git clone https://github.com/venkatkrp/Onlineapp.git <where do you want >
 git version
 git config --global user.name "venkatkrp"
 git config --global user.email "venkatkrp@gmail.com"
@@ -7,18 +7,21 @@ git config --list
 git help <verb>
 git init
 git remote add origin https://github.com/venkatkrp/Onlineapp.git
-git add -A (or specfic file)
+git add -A (or specfic file) -A/--all 
+---------------
+git add -A ====stages All
+git add . =====stages new and modified, without deleted
+git add -u ====stages modified and deleted, without new-
+-----------------
 git status
+git reset (before commit command"
 git commit -m "message"
-
-git branch branch(new branch)
-
-git checkout branch
-
-git add
-git commit -m
-git -u orgin <branchname>
 git pull origin master
+git push origin master
+
+git branch <New-branchname>
+git checkout branch
+git branch 
 
 --delete branch
 
@@ -27,3 +30,52 @@ git merge branchname
 git push origin mastger
 
 git push origin --delete <branch name>
+
+---
+EXAMPLE
+git init
+==rename  Change me > change-me
+---
+git add change-me delete-me
+git commit -m initial
+
+echo OK >> change-me
+rm delete-me
+echo Add me > add-me
+
+git status
+# Changed but not updated:
+#   modified:   change-me
+#   deleted:    delete-me
+# Untracked files:
+#   add-me
+
+git add .
+git status
+
+# Changes to be committed:
+#   new file:   add-me
+#   modified:   change-me
+# Changed but not updated:
+#   deleted:    delete-me
+
+git reset
+
+git add -u
+git status
+
+# Changes to be committed:
+#   modified:   change-me
+#   deleted:    delete-me
+# Untracked files:
+#   add-me
+
+git reset
+
+git add -A
+git status
+
+# Changes to be committed:
+#   new file:   add-me
+#   modified:   change-me
+#   deleted:    delete-me
