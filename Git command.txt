@@ -1,20 +1,15 @@
-Git 
-
-cd /
-cd /d
-ls
-git config --global user.name ""
-git config --global user.email ""
-get config --list
-
-git add 
+cd <move to working directory>
+git clone https://github.com/venkatkrp/Onlineapp.git
+git version
+git config --global user.name "venkatkrp"
+git config --global user.email "venkatkrp@gmail.com"
+git config --list 
+git help <verb>
+git init
+git remote add origin https://github.com/venkatkrp/Onlineapp.git
+git add -A (or specfic file)
 git status
-git -u orgin master
-
-
-git remote add origin "https://github.com/venkatkrp/Proj1.git"
-
-git clone -b <branch> <remote_repo>
+git commit -m "message"
 
 git branch branch(new branch)
 
